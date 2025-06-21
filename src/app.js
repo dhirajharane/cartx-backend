@@ -10,6 +10,11 @@ const ItemRoutes = require("./Routes/ItemRoutes");
 const app = express();
 const server = http.createServer(app);
 
+// Monitoring endpoint to keep backend awake
+app.get("/ping", (req, res) => {
+  res.status(200).send("Backend is alive");
+});
+
 app.use(cors());
 // Middlewares
 app.use(express.json());
