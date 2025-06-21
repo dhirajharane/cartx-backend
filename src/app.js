@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // local Vite
-      "cartx-frontend.vercel.app", // production Vercel
+      "https://cartx-frontend.vercel.app", // production Vercel
       process.env.FRONTEND_URL // allow setting via env
     ].filter(Boolean),
     credentials: true,
